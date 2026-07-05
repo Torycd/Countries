@@ -9,8 +9,8 @@ const Home = () => {
   const [regionSelect, setRegionSelect] = useState("");
   const navigation = useNavigation();
 
-  const isLoading = navigation.state === "loading";
   const data = useLoaderData();
+  const isLoading = navigation.state === "loading";
 
   const filteredData = data
     .filter((country) =>
@@ -32,7 +32,6 @@ const Home = () => {
         searchInput={searchInput}
       />
       <CountryData data={filteredData} />
-
       {isLoading && <LoadingComp />}
     </>
   );
@@ -46,7 +45,6 @@ export async function loader() {
       Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
     },
   });
-
   if (!response.ok) {
     throw new Error("Failed to fetch countries.");
   }

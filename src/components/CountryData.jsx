@@ -21,7 +21,7 @@ const CountryData = ({ data }) => {
         >
           <img
             className="w-full rounded-t-md"
-            src={country.flag.svg}
+            src={`https://flags.restcountries.com/v5/w320/${country.codes.alpha_2.toLowerCase()}.png`}
             alt={country.names.common}
           />
           <div className="p-3">

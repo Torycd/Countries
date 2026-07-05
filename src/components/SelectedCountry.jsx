@@ -48,7 +48,10 @@ const SelectedCountry = () => {
       {/* selected country image and info */}
       <div className="grid sm:grid-cols-2 space-y-5 sm:space-x-20">
         <div>
-          <img src={country.flags?.svg} alt={country.flags?.alt || "Flag"} />
+          <img
+            src={`https://flags.restcountries.com/v5/w320/${country.codes.alpha_2.toLowerCase()}.png`}
+            alt={country.flags?.alt || "Flag"}
+          />
         </div>
 
         <div>
