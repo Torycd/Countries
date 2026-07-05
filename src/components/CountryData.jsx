@@ -17,7 +17,7 @@ const CountryData = ({ data }) => {
       {data.map((country) => (
         <div
           key={country.names.common}
-          className="element shadow-xl h-full rounded-md transform transition duration-300 hover:scale-105 cursor-pointer"
+          className="element shadow-xl h-full rounded-md t7ransform transition duration-300 hover:scale-105 cursor-pointer"
           onClick={() => handleSelectCountry(country)}
         >
           <img
