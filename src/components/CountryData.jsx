@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import "../index.css";
+import { memo } from "react";
 
 const CountryData = ({ data }) => {
   const navigate = useNavigate();
@@ -54,4 +55,4 @@ const CountryData = ({ data }) => {
   );
 };
 
-export default CountryData;
+export default memo(CountryData);

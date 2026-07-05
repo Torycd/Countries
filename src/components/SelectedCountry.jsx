@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router";
 
@@ -129,4 +129,4 @@ const SelectedCountry = () => {
   );
 };
 
-export default SelectedCountry;
+export default memo(SelectedCountry);
